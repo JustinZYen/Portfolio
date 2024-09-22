@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
+#nav-bar{
+    position: sticky;
+    background-color:goldenrod;
+    font-size:300;
+    
+}
+
+#title-page {
+    background-color:green;
+}
