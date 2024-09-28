@@ -3,17 +3,21 @@
   "version": "1.0.0",
   "description": "My portfolio website",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"No test implemented\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JustinZYen/NotSkriblio.git"
+    "url": "git+https://github.com/JustinZYen/Portfolio"
   },
   "author": "Justin Yen",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JustinZYen/NotSkriblio/issues"
+    "url": "https://github.com/JustinZYen/Portfolio/issues"
   },
-  "homepage": "https://github.com/JustinZYen/NotSkriblio#readme"
+  "homepage": "https://github.com/JustinZYen/Portfolioo#readme",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
 }
