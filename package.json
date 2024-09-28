@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"No test implemented\""
   },
   "repository": {
@@ -16,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/JustinZYen/Portfolio/issues"
   },
-  "homepage": "https://github.com/JustinZYen/Portfolioo#readme",
+  "homepage": "https://github.com/JustinZYen/Portfolio#readme",
   "dependencies": {
     "express": "^4.21.0"
   }
