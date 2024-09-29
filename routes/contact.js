@@ -6,8 +6,14 @@ router.get('/', function(req, res, next) {
   res.render("contact");
 });
 
-router.post('/', function(req, res, next) {
+router.post('/submit', function(req, res, next) {
   console.log(req.body);
-  res.render("contact");
+  res.redirect("./success");
 });
+
+router.get('/success', function(req, res, next) {
+  console.log("redirected to success");
+  res.render("contact-success");
+});
+
 module.exports = router;

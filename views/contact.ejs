@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="/stylesheets/page.css">
     </head>
     <body>
         <%- include("nav-bar")%>
         Contact Page!!!
-        <form id="email-form" method="POST">
+        <form id="email-form" method="POST" action="contact/submit">
             <input type="text" name="name">
             <input type="submit">
         </form>
