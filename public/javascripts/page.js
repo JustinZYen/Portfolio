@@ -1,3 +1,1 @@
-(function page() {
-})();
 export {};
