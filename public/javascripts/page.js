@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-let message = 'Hello World';
-console.log(message);
-console.log(message + "a");
+(function page() {
+})();
+export {};

@@ -1,4 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 (function pageSetup() {
+    console.log("SSSSS");
 })();
+export {};
