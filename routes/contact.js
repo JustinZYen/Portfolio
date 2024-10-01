@@ -1,14 +1,19 @@
 const express = require('express');
 const mongoose = require("mongoose");
+const nodemailer = require("nodemailer");
+// symz mnvk hzik gvhh
 
 const router = express.Router();
-/* GET users listing. */
-// pass = NOkaankbbIllI0v3
-const mongoURI = process.env.AZURE_COSMOS_CONNECTIONSTRING || process.env.ATLAS_MONGODB_URI;
-console.log("URI being used for mongo is"+mongoURI);
-mongoose.connect(mongoURI);
-
-const Cat = mongoose.model('Cat', { name: String });
+const transporter = nodemailer.createTransport({
+  service: "Gmail",
+  host: "smtp.gmail.com",
+  port: 465,
+  secure: true,
+  auth: {
+    user: process.env.MAIL_SRC_ADDRESS,
+    pass: process.env.MAIL_SRC_PASS,
+  },
+});
 
 router.get('/', function(req, res, next) {
   res.render("contact");
@@ -16,13 +21,32 @@ router.get('/', function(req, res, next) {
 
 router.post('/submit', function(req, res, next) {
   console.log(req.body);
-  const kitty = new Cat({ name: req.body.name });
-  kitty.save().then(() => console.log('meow'));
-  res.redirect("./success");
+  if (typeof req.body.name === "string" && typeof req.body.content === "string") { // Check for existence of correct fields
+    const nameLength = req.body.name.length;
+    const contentLength = req.body.content.length;
+    if (nameLength > 0 && nameLength < 100 && contentLength > 0 && contentLength < 10000) { // Check for reasonable content length
+      const mailOptions = {
+        to: process.env.MAIL_DST_ADDRESS,
+        subject: "Email from "+req.body.name,
+        text: req.body.content,
+      };
+    
+      transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+          res.redirect("/");
+        } else {
+          res.redirect("./success");
+        }
+      });
+    } else {
+      res.redirect("/"); // Some condition was not met
+    }
+  } else {
+    res.redirect("/"); // Some condition was not met
+  }
 });
 
 router.get('/success', function(req, res, next) {
-  console.log("redirected to success");
   res.render("contact-success");
 });
 

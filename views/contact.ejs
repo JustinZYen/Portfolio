@@ -2,13 +2,19 @@
 <html>
     <head>
         <link rel="stylesheet" href="/stylesheets/page.css">
+        <link rel="stylesheet" href="/stylesheets/contact.css">
     </head>
     <body>
         <%- include("nav-bar")%>
-        Contact Page!!!
-        <form id="email-form" method="POST" action="contact/submit">
-            <input type="text" name="name">
-            <input type="submit">
-        </form>
+        <div id="main-body">
+            <h1>Contact Me</h1>
+
+            <form id="email-form" method="POST" action="contact/submit">
+                <input type="text" name="name" placeholder="Name">
+                <textarea rows="10" name="content" placeholder="Message"></textarea>
+                <input type="submit">
+            </form>
+        </div>
+        
     </body>
 </html>
