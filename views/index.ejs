@@ -1,29 +1,103 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Justin Yen</title>
-        <script type="module" src="/javascripts/page-setup.js" defer></script>
-        <script type="module" src="/javascripts/page.js" defer></script>
-        <link rel="stylesheet" href="/stylesheets/page.css">
-    </head>
-    <body>
-        <%- include("nav-bar")%>
+
+<head>
+    <title>Justin Yen</title>
+    <script type="module" src="/javascripts/page-setup.js" defer></script>
+    <script type="module" src="/javascripts/page.js" defer></script>
+    <link rel="stylesheet" href="/stylesheets/page.css">
+</head>
+
+<body>
+    <%- include("nav-bar")%>
         <div id="title-page">
             <h1>Justin Yen</h1>
             <h2>Computer Science Student at ASU's Barrett, the Honors College</h2>
         </div>
         <div id="education">
             <h1>Education</h1>
-            <h2>Arizona State University</h2>
+            <div class="school">
+                <p>Arizona State University</p>
+                <p>Computer Science major at (junior standing) at Barrett, the Honors College</p>
+                <p>4.00 GPA</p>
+                <p>Anticipated graduation date: May 2026</p>
+            </div>
         </div>
         <div id="skills">
-
+            <h1>Skills</h1>
+            <div class="skill">
+                <p>Programming Languages</p>
+                <ul>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>C</li>
+                    <li>C++</li>
+                    <li>Javascript</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ul>
+            </div>
+            <div class="skill"></div>
+            <p>Tools</p>
+            <ul>
+                <li>Git/Github</li>
+                <li>UNIX</li>
+                <li>Visual Studio</li>
+                <li>Eclipse</li>
+                <li>Firebase/Firestore</li>
+                <li>Microsoft Azure</li>
+            </ul>
+        </div>
+        <div class="skill"></div>
+        <p>Courses</p>
+        <ul>
+            <li>Data Structures and Algorithms</li>
+            <li>Object-Oriented Programming and Data Structures</li>
+            <li>Information Assurance</li>
+            <li>Computer Organization/Assembly Language</li>
+            <li>Digital Design Fundamentals</li>
+        </ul>
+        </div>
         </div>
         <div id="work-experience">
-
-        </div>  
-        <div id="projects">
-
+            <h1>Work Experience</h1>
+            <div class="job">
+                <h2>Tutoring Center Learning Assistant</h2>
+                <p>ASU Fulton Schools of Engineering, Tempe, Arizona</p>
+                <p>August 2024-present</p>
+                <p>Tutor students in a variety of computer science and math subjects</p>
+            </div>
+            <div class="job"></div>
+            <h2>Private Math Tutor</h2>
+            <p>September 2023-present</p>
+            <p>1:1 tutoring in college-level math subjects</p>
         </div>
-    </body>
+        <div class="job"></div>
+        <h2>Theme Park Ride Operator</h2>
+        <p>California's Great America, Santa Clara, California</p>
+        <p>May 2023-July 2023</p>
+        <p>Worked as a ride operator and cashier for 3 months<br>Communicated to guests and worked as a team</p>
+        </div>
+        </div>
+        <div id="projects">
+            <h1>Projects</h1>
+            <div class="project">
+                <h2>Video Game Crafting Calculator (<a
+                        href="https://albion-project-9585a.web.app/">https://albion-project-9585a.web.app/</a>)</h2>
+                <p>Firebase-hosted website that utilizes an API to obtain price data, displaying ways to craft items
+                    alongside their prices</p>
+                <p>Makes use of D3.js to display items in an easily digestible manner</p>
+                <a href="https://github.com/JustinZYen/AlbionProject">https://github.com/JustinZYen/AlbionProject</a>
+            </div>
+            <div class="project"></div>
+            <h2>Portfolio Website(<a
+                    href="https://justin-yen-ezfgh2d4g7e8gagc.canadacentral-01.azurewebsites.net/">https://justin-yen-ezfgh2d4g7e8gagc.canadacentral-01.azurewebsites.net/</a>)
+            </h2>
+            <p>Azure Web Service hosted portfolio website, with a node.js backend to support redirection and a contact
+                form </p>
+            <a href="https://github.com/JustinZYen/AlbionProject">https://github.com/JustinZYen/AlbionProject</a>
+        </div>
+        </div>
+</body>
+
 </html>
