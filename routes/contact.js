@@ -33,6 +33,7 @@ router.post('/submit', function(req, res, next) {
     
       transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
+          console.error("Error sending email: ", error);
           res.redirect("/");
         } else {
           res.redirect("./success");
