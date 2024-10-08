@@ -3,13 +3,13 @@
 
 <head>
     <title>Justin Yen</title>
+    <%- include("global")%>
     <script type="module" src="/javascripts/page-setup.js" defer></script>
-    <script type="module" src="/javascripts/page.js" defer></script>
-    <link rel="stylesheet" href="/stylesheets/page.css">
 </head>
 
-<body>
+<body class="parallax_layer">
     <%- include("nav-bar")%>
+
         <div id="title-page">
             <h1>Justin Yen</h1>
             <h2>Computer Science Student at ASU's Barrett, the Honors College</h2>
@@ -80,23 +80,24 @@
         <div id="projects">
             <h1>Projects</h1>
             <div class="project">
-                <h2>Video Game Crafting Calculator (<a
-                        href="https://albion-project-9585a.web.app/">https://albion-project-9585a.web.app/</a> or <a
-                        href="https://albion-project-9585a.firebaseapp.com/">https://albion-project-9585a.firebaseapp.com/</a>)
+                <h2>
+                    <a href="https://albion-project-9585a.firebaseapp.com/">Video Game Crafting Calculator</a>
+                    (<a
+                        href="https://github.com/JustinZYen/AlbionProject">https://github.com/JustinZYen/AlbionProject</a>)
                 </h2>
                 <p>Firebase-hosted website that utilizes an API to obtain price data, displaying ways to craft items
                     alongside their prices</p>
                 <p>Makes use of D3.js to display items in an easily digestible manner</p>
-                <a href="https://github.com/JustinZYen/AlbionProject">https://github.com/JustinZYen/AlbionProject</a>
             </div>
             <div class="project">
-                <h2>Portfolio Website (<a
-                        href="https://justin-yen-ezfgh2d4g7e8gagc.canadacentral-01.azurewebsites.net/">https://justin-yen-ezfgh2d4g7e8gagc.canadacentral-01.azurewebsites.net/</a>)
+                <h2>
+                    <a href="https://justin-yen-ezfgh2d4g7e8gagc.canadacentral-01.azurewebsites.net/">Portfolio
+                        Website</a>
+                    (<a href="https://github.com/JustinZYen/Portfolio">https://github.com/JustinZYen/Portfolio</a>)
                 </h2>
                 <p>Azure Web Service hosted portfolio website, with a node.js backend to support redirection and a
                     contact
                     form </p>
-                <a href="https://github.com/JustinZYen/AlbionProject">https://github.com/JustinZYen/AlbionProject</a>
             </div>
         </div>
 </body>
