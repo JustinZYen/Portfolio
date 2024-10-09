@@ -1,0 +1,40 @@
+section {
+    padding: 0px 20px;
+}
+
+section * {
+    padding: 0;
+}
+
+h1 {
+    font-size:50pt;
+    margin:0
+}
+
+h2 {
+    font-size:30pt;
+    margin:0
+}
+
+#title-page {
+    background-image:linear-gradient(rgb(0,0,0,0),gray);
+    height: 1000px;
+    display:flex;
+    align-items:center;
+    flex-direction: row;
+}
+
+
+#skills li{
+    display:inline-block;
+}
+
+#skills li::after {
+    content:" ○";
+}
+#skills li:last-child:after {
+    content:"";
+}
+#skills li img {
+    height: 20px;
+}
