@@ -1,10 +1,10 @@
-const express = require('express');
-const mongoose = require("mongoose");
-const nodemailer = require("nodemailer");
+import { Router } from 'express';
+import mongoose from "mongoose";
+import { createTransport } from "nodemailer";
 // symz mnvk hzik gvhh
 
-const router = express.Router();
-const transporter = nodemailer.createTransport({
+const router = Router();
+const transporter = createTransport({
   service: "Gmail",
   host: "smtp.gmail.com",
   port: 465,
@@ -51,4 +51,4 @@ router.get('/success', function(req, res, next) {
   res.render("contact-success");
 });
 
-module.exports = router;
+export default router;
