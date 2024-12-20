@@ -1,6 +1,5 @@
 import { Router } from 'express';
 import { createTransport } from "nodemailer";
-// symz mnvk hzik gvhh
 const router = Router();
 const transporter = createTransport({
     service: "Gmail",
