@@ -1,5 +1,4 @@
 import { Router } from 'express';
-import mongoose from "mongoose";
 import { createTransport } from "nodemailer";
 // symz mnvk hzik gvhh
 
@@ -15,11 +14,11 @@ const transporter = createTransport({
   },
 });
 
-router.get('/', function(req, res, next) {
+router.get('/', function(_req, res, _next) {
   res.render("contact");
 });
 
-router.post('/submit', function(req, res, next) {
+router.post('/submit', function(req, res, _next) {
   console.log(req.body);
   if (typeof req.body.name === "string" && typeof req.body.content === "string") { // Check for existence of correct fields
     const nameLength = req.body.name.length;
@@ -31,7 +30,7 @@ router.post('/submit', function(req, res, next) {
         text: req.body.content,
       };
     
-      transporter.sendMail(mailOptions, (error, info) => {
+      transporter.sendMail(mailOptions, (error, _info) => {
         if (error) {
           console.error("Error sending email: ", error);
           res.redirect("/");
@@ -47,7 +46,7 @@ router.post('/submit', function(req, res, next) {
   }
 });
 
-router.get('/success', function(req, res, next) {
+router.get('/success', function(_req, res, _next) {
   res.render("contact-success");
 });
 
