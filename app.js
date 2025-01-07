@@ -6,11 +6,19 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import indexRouter from './routes/index.js';
 import contactRouter from './routes/contact.js';
+import helmet from "helmet";
 var app = express();
 // view engine setup
 const __dirname = import.meta.dirname;
 app.set('views', join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.use(helmet({
+    contentSecurityPolicy: {
+        directives: {
+            frameAncestors: ["'self"]
+        }
+    }
+}))
 app.use(logger('dev'));
 app.use(json());
 app.use(urlencoded({ extended: false }));
