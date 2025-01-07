@@ -16,7 +16,7 @@ app.use(helmet({
     contentSecurityPolicy: {
         directives: {
             frameAncestors: ["'self'"],
-            frameSrc: ["https://albioncraftingcalculator.azurewebsites.net/", "'self'"]
+            frameSrc: ["'self'", "https://albioncraftingcalculator.azurewebsites.net/", "https://notskriblio.onrender.com/"]
         }
     }
 }));

@@ -1,3 +1,9 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
 .main > section {
     padding: 0px 20px;
 }
@@ -56,4 +62,24 @@ h2 {
 }
 #skills li img {
     height: 20px;
+}
+
+.project .iframe {
+    width: calc(100vw * var(--scale-factor));
+    height: calc(100vh * var(--scale-factor));
+}
+
+.project iframe {
+    width: 100vw;
+    height: 100vh;
+    -moz-transform: scale(var(--scale-factor), var(--scale-factor)); 
+    -webkit-transform: scale(var(--scale-factor), var(--scale-factor)); 
+    -o-transform: scale(var(--scale-factor), var(--scale-factor));
+    -ms-transform: scale(var(--scale-factor), var(--scale-factor));
+    transform: scale(var(--scale-factor), var(--scale-factor)); 
+    -moz-transform-origin: top left;
+    -webkit-transform-origin: top left;
+    -o-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
 }
