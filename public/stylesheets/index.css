@@ -64,12 +64,13 @@ h2 {
     height: 20px;
 }
 
-.project .iframe {
+#projects .project .iframe-wrapper {
+    overflow: hidden;
     width: calc(100vw * var(--scale-factor));
     height: calc(100vh * var(--scale-factor));
 }
 
-.project iframe {
+#projects .project iframe {
     width: 100vw;
     height: 100vh;
     -moz-transform: scale(var(--scale-factor), var(--scale-factor)); 
