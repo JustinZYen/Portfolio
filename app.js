@@ -15,7 +15,8 @@ app.set('view engine', 'ejs');
 app.use(helmet({
     contentSecurityPolicy: {
         directives: {
-            frameAncestors: ["'self'"]
+            frameAncestors: ["'self'"],
+            frameSrc: ["https://albioncraftingcalculator.azurewebsites.net/", "'self'"]
         }
     }
 }));
