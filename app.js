@@ -15,10 +15,10 @@ app.set('view engine', 'ejs');
 app.use(helmet({
     contentSecurityPolicy: {
         directives: {
-            frameAncestors: ["'self"]
+            frameAncestors: ["'self'"]
         }
     }
-}))
+}));
 app.use(logger('dev'));
 app.use(json());
 app.use(urlencoded({ extended: false }));

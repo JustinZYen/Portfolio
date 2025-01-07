@@ -4,9 +4,9 @@ import express, { json, urlencoded } from 'express';
 import { join } from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
-
 import indexRouter from './routes/index.js';
 import contactRouter from './routes/contact.js';
+import helmet from "helmet";
 
 var app = express();
 
@@ -14,7 +14,13 @@ var app = express();
 const __dirname = import.meta.dirname;
 app.set('views', join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
+app.use(helmet({
+  contentSecurityPolicy: {
+    directives: {
+      frameAncestors: ["'self'"]
+    }
+  }
+}))
 app.use(logger('dev'));
 app.use(json());
 app.use(urlencoded({ extended: false }));
@@ -25,12 +31,12 @@ app.use('/', indexRouter);
 app.use('/contact', contactRouter);
 
 // catch 404 and forward to error handler
-app.use(function(_req, _res, next) {
+app.use(function (_req, _res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err: { message: any; status: any; }, req: { app: { get: (arg0: string) => string; }; }, res: { locals: { message: any; error: any; }; status: (arg0: any) => void; render: (arg0: string) => void; }, _next: any) {
+app.use(function (err: { message: any; status: any; }, req: { app: { get: (arg0: string) => string; }; }, res: { locals: { message: any; error: any; }; status: (arg0: any) => void; render: (arg0: string) => void; }, _next: any) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
