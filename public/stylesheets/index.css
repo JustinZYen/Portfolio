@@ -17,7 +17,7 @@ h2 {
 }
 
 #title-page {
-    background-image:linear-gradient(rgb(0,0,0,0),gray);
+    background:linear-gradient(gray,80%,rgba(0, 0, 0, 0));
     height: 1000px;
     display:flex;
     align-items:center;

@@ -7,8 +7,12 @@
     margin: 0
 }
 
+:root {
+    --main-bg-color: gainsboro;
+}
+
 body {
-    background-color: gainsboro;
+    background-color: var(--main-bg-color);
 }
 
 header {
@@ -18,7 +22,7 @@ header {
 }
 
 #nav-bar {
-    padding: 0 20px;
+    padding: 10px 20px 0;
     background-color: goldenrod;
     display: flex;
     flex-direction: row;
