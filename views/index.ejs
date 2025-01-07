@@ -10,16 +10,13 @@
 
 <body>
   <%- include("shared/nav-bar")%>
-  <section id="title-page">
-    <div>
-      <h1>Justin Yen</h1>
-      <h2>Computer Science Student at ASU's Barrett, the Honors College</h2>
-    </div>
+  <section class="main">
+    <%- include("main-page/title-page") %>
+    <%- include("main-page/education")%>
+    <%- include("main-page/skills") %>
+    <%- include("main-page/work-experience") %>
+    <%- include("main-page/projects") %>
   </section>
-  <%- include("main-page/education")%>
-  <%- include("main-page/skills") %>
-  <%- include("main-page/work-experience") %>
-  <%- include("main-page/projects") %>
 </body>
 
 </html>

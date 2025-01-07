@@ -1,9 +1,22 @@
-section {
+.main > section {
     padding: 0px 20px;
 }
 
-section * {
+.main > section * {
     padding: 0;
+}
+
+.main > section {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.main > section:nth-child(odd) {
+    flex-direction: row;
+}
+
+.main > section:nth-child(even) {
+    flex-direction: row-reverse;
 }
 
 h1 {
@@ -16,14 +29,20 @@ h2 {
     margin:0
 }
 
+
 #title-page {
     background:linear-gradient(gray,80%,rgba(0, 0, 0, 0));
-    height: 1000px;
+    padding: 20px; 
+    height: calc(100vh - var(--nav-bar-height));
     display:flex;
-    align-items:center;
+    align-items:end;
     flex-direction: row;
 }
 
+#title-page > img {
+    align-self:self-start;
+    height: 100%;
+}
 
 #skills li{
     display:inline-block;

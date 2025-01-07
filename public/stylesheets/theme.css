@@ -9,6 +9,7 @@
 
 :root {
     --main-bg-color: gainsboro;
+    --nav-bar-height: 50px;
 }
 
 body {
@@ -26,7 +27,7 @@ header {
     background-color: goldenrod;
     display: flex;
     flex-direction: row;
-    height: 50px;
+    height: var(--nav-bar-height);
 }
 
 #nav-bar a {
