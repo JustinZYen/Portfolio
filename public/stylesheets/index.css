@@ -1,7 +1,7 @@
 .main {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 100px;
 }
 
 .main > section {
@@ -14,7 +14,7 @@
 
 .main > section {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .main > section:nth-child(odd) {
@@ -25,6 +25,8 @@
     flex-direction: row-reverse;
 }
 
+
+/* Styling for specific element types */
 h1 {
     font-size:50pt;
     margin:0
@@ -35,11 +37,15 @@ h2 {
     margin:0
 }
 
+ul {
+    list-style-position: inside;
+}
 
+/* Styling for title area */
 #title-page {
-    background:linear-gradient(gray,80%,rgba(0, 0, 0, 0));
+    background:linear-gradient(gray,50%,rgba(0, 0, 0, 0));
     padding: 20px; 
-    height: calc(100vh - var(--nav-bar-height));
+    height: 300px;
     display:flex;
     align-items:end;
     flex-direction: row;
@@ -50,6 +56,7 @@ h2 {
     height: 100%;
 }
 
+/* Styling for skills area */
 #skills li{
     display:inline-block;
 }
@@ -64,15 +71,27 @@ h2 {
     height: 20px;
 }
 
+/* Styling for projects area */
 #projects > * {
     max-width: 100%;
 }
 
 #projects .project {
     display:flex;
-    flex-direction: row;
     justify-content: space-between;
     margin: 30px 0;
+}
+
+#projects .project:nth-child(even) {
+    flex-direction: row;
+}
+
+#projects .project:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+#projects .project > * {
+    padding: 0 10px;
 }
 
 #projects .project .iframe-wrapper {
@@ -95,4 +114,8 @@ h2 {
     -o-transform-origin: top left;
     -ms-transform-origin: top left;
     transform-origin: top left;
+}
+
+#projects .project iframe:hover {
+    filter:brightness(95%)
 }
