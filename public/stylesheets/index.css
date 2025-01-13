@@ -90,16 +90,11 @@ ul {
     flex-direction: row-reverse;
 }
 
-#projects .project > * {
-    padding: 0 10px;
-}
-
 #projects .project .iframe-wrapper {
     flex: 0 0 auto;
     overflow: hidden;
     width: calc(100vw * var(--scale-factor));
     height: calc(100vh * var(--scale-factor));
-    box-sizing: content-box; /* Otherwise iframe leaks out of wrapper div */
 }
 
 #projects .project iframe {
