@@ -99,6 +99,7 @@ ul {
     overflow: hidden;
     width: calc(100vw * var(--scale-factor));
     height: calc(100vh * var(--scale-factor));
+    box-sizing: content-box; /* Otherwise iframe leaks out of wrapper div */
 }
 
 #projects .project iframe {
